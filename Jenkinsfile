@@ -32,7 +32,7 @@ pipeline{
             steps{
                 script{
                     // login to dockerhub using doker creds we saved to push this image with a unique ID
-                    docker.withRegistry('https://index.docker.io/v1/','mydocker-creds'){
+                    docker.withRegistry('https://index.docker.io/v1/','mydocker-cerds'){
                       dockerImage.push("react_app_${env.BUILD_NUMBER}")
                     }
                 }
